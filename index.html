@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palak — CSE Student & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">PD Profile<span class="logo-dot"></span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#hackathons">Hackathons</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon" id="toggleIcon">☾</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#hackathons">Hackathons</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="availability-badge">
+          <span class="pulse-ring"></span>
+          <span class="pulse-dot"></span>
+          open to internships · 2026
+        </div>
+
+        <h1 class="hero-name">
+          <span class="line-reveal" style="--d:.1s">Palak</span>
+          <span class="line-reveal accent-text" style="--d:.25s">Deshmukh</span>
+        </h1>
+
+        <div class="typed-wrap">
+          <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+        </div>
+
+        <p class="hero-bio">
+          3rd-year Computer Science student at <strong>Sanjivani University , Kopargaon</strong>. 
+          I am passionate and motivated computer science student with strong programming skills and passion for building real-world applications..
+        
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="Resume/ResumePalak_Deshmukh.pdf" class="btn-outline" id="downloadResume">Download CV</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num" data-target="10">0</span><span class="stat-label">Projects Built</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Certs Earned</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label">Years Coding</span></div>
+        </div>
+      </div>
+    
+      <div class="hero-right">
+        <div class="photo-card">
+          <div class="photo-frame" id="photoFrame" title="Click to upload your photo. Right-click to delete.">
+            <div class="photo-initials" id="photoInitials">PD</div>
+            <img id="photoImg" src="" alt="Palak Deshmukh" style="display:none;" />
+            <div class="photo-overlay">
+              <span>📷 Upload</span>
+            </div>
+          </div>
+          <div class="photo-card-detail">
+            <div class="card-name">Palak Deshmukh</div>
+            <div class="card-title">CSE Student</div>
+            <div class="card-location">📍 Kopargaon, Maharashtra</div>
+          </div>
+
+<!--
+        </div>
+        <div class="floating-pill pill-1">React · Node.js</div>
+        <div class="floating-pill pill-2">ML Enthusiast</div>
+        <div class="floating-pill pill-3">Open Source</div>
+      </div>
+    </div>
+  -->
+
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I’m a passionate developer who believes great software comes from clean architecture, creative thinking, and constant iteration. Currently pursuing my B.Tech in Computer Science and Engineering, I focus on building projects that solve real-world problems.
+
+Beyond coding, I explore system design, contribute to open source, and participate in hackathons—enjoying the challenge of turning ideas into fully deployed solutions.</p>
+          <div class="about-tags">
+            <span>Problem Solver</span>
+            <span>Fast Learner</span>
+            <span>Team Player</span>
+            <span>Creative Thinker</span>
+          </div>
+        </div>
+        <div class="about-info reveal">
+          <div class="info-block">
+            <div class="info-row"><span class="info-label">Degree</span><span>B.Tech Computer Science and Engineering</span></div>
+            <div class="info-row"><span class="info-label">Year</span><span>3rd Year (2024–2028)</span></div>
+            <div class="info-row"><span class="info-label">College</span><span>Sanjivani University, Kopargaon</span></div>
+            <div class="info-row"><span class="info-label">CGPA</span><span>8.71 / 10</span></div>
+            <div class="info-row"><span class="info-label">Focus</span><span>Software Developer (Problem-Solving Focused)</span></div>
+            <div class="info-row"><span class="info-label">Status</span><span class="status-open">🟢 Open to Opportunities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title">Skills & Stack</h2>
+      </div>
+
+      <div class="skills-categories">
+        <div class="skill-category reveal">
+          <h3 class="cat-title">Languages</h3>
+          <div class="skill-pills">
+            <span class="skill-pill" data-level="90">Python <em>90%</em></span>
+            <span class="skill-pill" data-level="80">Java <em>80%</em></span>
+            <span class="skill-pill" data-level="75">C++ <em>75%</em></span>
+            <span class="skill-pill" data-level="85">HTML <em>85%</em></span>
+            <span class="skill-pill" data-level="60">TypeScript <em>60%</em></span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="cat-title">Frontend</h3>
+          <div class="skill-pills">
+            <!--<span class="skill-pill">React</span>-->
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">Javascript</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="cat-title">Backend & DB</h3>
+          <div class="skill-pills">
+            <!--<span class="skill-pill">Node.js</span>-->
+           <!-- <span class="skill-pill">Express.js</span>-->
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">Django</span>
+            <span class="skill-pill">Firebase</span>
+          </div>
+        </div>
+        
+        <!--
+        <div class="skill-category reveal">
+          <h3 class="cat-title">ML & Data</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">TensorFlow</span>
+            <span class="skill-pill">Scikit-learn</span>
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Matplotlib</span>
+            <span class="skill-pill">Jupyter</span>
+          </div>
+        </div>-->
+        <div class="skill-category reveal">
+          <h3 class="cat-title">Tools</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Android Studio</span>
+           <!-- <span class="skill-pill">Linux</span> -->
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">OpenModelica</span>
+            <span class="skill-pill">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">03</span>
+        <h2 class="sec-title">Projects</h2>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ml">ML / AI</button>
+        <button class="filter-btn" data-filter="app">App</button>
+      </div>
+
+      <div class="proj-grid">
+
+        <!--<div class="proj-card featured reveal" data-cat="web">
+          <div class="proj-card-inner">
+            <div class="featured-label">✦ Featured</div>
+            <div class="proj-header">
+              <div class="proj-icon">🛒</div>
+              <a href="#" class="proj-link-arrow">↗</a>
+            </div>
+            <h3 class="proj-name">ShopSmart — E-Commerce Platform</h3>
+            <p class="proj-desc">A full-stack e-commerce web app with JWT auth, payment integration, admin dashboard, real-time cart, and a recommendation engine. Built for scale.</p>
+            <div class="proj-meta">
+              <div class="proj-tags">
+                <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+              </div>
+              <a href="#" class="proj-demo-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>-->
+
+        <div class="proj-card reveal" data-cat="ml">
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <div class="proj-icon">🎓</div>
+              <a href="#" class="proj-link-arrow">↗</a>
+            </div>
+            <h3 class="proj-name">StudExa-Student Progress Monitoring System</h3>
+            <p class="proj-desc">StudExa is a web-based Student Progress Monitoring System that helps track and manage student achievements like hackathons, research, certificates, and patents. It automatically calculates MAP points and provides a dashboard to monitor performance efficiently.</p>
+            <div class="proj-meta">
+              <div class="proj-tags">
+                <span>Django</span><span>HTML</span><span>CSS</span><span>SQLite</span>
+              </div>
+              <a href="https://github.com/Palak9763/StudExa" class="proj-demo-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-cat="web">
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <div class="proj-icon">🩺</div>
+              <a href="#" class="proj-link-arrow">↗</a>
+            </div>
+            <h3 class="proj-name">SwasthyaHetu-Medicine tracking and distribution system</h3>
+            <p class="proj-desc">Developing a medicine tracking and distribution system to make healthcare more affordable and accessible. The platform reduces costs by eliminating intermediaries like wholesalers and retailers, enabling direct delivery of medicines to users at lower prices while improving overall health and well-being.</p>
+            <div class="proj-meta">
+              <div class="proj-tags">
+                <span>Figma</span><span>CSS</span><span>Socket.io</span>
+              </div>
+              <a href="#" class="proj-demo-btn">Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-cat="ml">
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <div class="proj-icon">📅</div>
+              <a href="#" class="proj-link-arrow">↗</a>
+            </div>
+            <h3 class="proj-name">SmartGuide — Event Planner</h3>
+            <p class="proj-desc">SmartGuide is an AI-powered tool that automates event planning tasks like booking, scheduling, and arrangements.
+It adapts in real time and makes event management simple and efficient.
+</p>
+            <div class="proj-meta">
+              <div class="proj-tags">
+                <span>Python</span><span>Figma</span><span>FastAPI</span>
+              </div>
+              <a href="https://github.com/Sarthak1ad/SmartGuid" class="proj-demo-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-cat="app">
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <div class="proj-icon">
+📷</div>
+              <a href="#" class="proj-link-arrow">↗</a>
+            </div>
+            <h3 class="proj-name">SmartCam-Webcam-Based Health Monitoring</h3>
+            <p class="proj-desc">No platform offers a real-time health score using only webcam data.
+
+This project tracks multiple health metrics directly on-device using a webcam.
+
+It combines them into a single, simple, and private health score.
+
+
+</p>
+            <div class="proj-meta">
+              <div class="proj-tags">
+                <span>React</span><span>Firebase</span><span>Node.js</span>
+              </div>
+              <a href="https://github.com/Palak9763/Hackathon" class="proj-demo-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal" data-cat="web">
+          <div class="proj-card-inner">
+            <div class="proj-header">
+              <div class="proj-icon">⚙️</div>
+              <a href="#" class="proj-link-arrow">↗</a>
+            </div>
+            <h3 class="proj-name">OpenModelica-Simulation</h3>
+            <p class="proj-desc">A PyQt6 desktop app to run OpenModelica compiled simulations. Users can browse and select a simulation executable, set start and stop times (0 ≤ start < stop < 5), and execute it with one click. Built with Python OOP principles, it runs simulations in background threads and displays live output.</p>
+            <div class="proj-meta">
+              <div class="proj-tags">
+                <span>Python</span><span>PyQt6</span><span>OpenModelica</span>
+              </div>
+              <a href="https://github.com/Palak9763/OpenModelica" class="proj-demo-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="experience">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title"> Education</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!--<div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type work">Hackathon</span>
+            <h3>Kurukshetra 2025</h3>
+            <p>Participated 🎯</p>
+            <p class="tl-place">MIT,Pune</p>
+            <p class="tl-date">August 2025 . 24h Hackathon</p>
+            <ul class="tl-bullets">
+              <li>Built SmartGuide, an AI-powered event planning tool for booking, scheduling, and arrangements</li>
+              <li>Designed to automate tasks, adapt in real time, and simplify event management</li>
+            </ul>
+            <div class="tl-actions">
+              <a class="btn-view-cert" href="https://drive.google.com/file/d/1t2RBf0ZDyFLn2IgjbTW_d4CZRfTKn1XD/view?usp=drivesdk">View</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type work">Hackathon</span>
+            <h3>Innoyudh 2025 </h3>
+            <p> Among Top 10 Finalist⭐ </p>
+            <p class="tl-place">NSRIT, Andhra Pradesh(Vizag)</p>
+            <p class="tl-date">December 2025 . 24h National Hackathon</p>
+            <ul class="tl-bullets">
+              <li>Developing a webcam-based health monitoring system that generates a real-time overall health score</li>
+              <li>Ensures privacy by processing data on-device and combining multiple health metrics into one dashboard</li>
+            </ul>
+            <div class="tl-actions">
+              <a class="btn-view-cert" href="https://drive.google.com/file/d/1Pn1P13wiq7MMzs3_Sqd8bQqzKvLZt0Pe/view?usp=drivesdk">View</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type hack">Hackathon</span>
+            <h3>Smart India Hackathon</h3>
+            <p>Participated 🎯</p>
+            <p class="tl-place">Sanjivani University,Kopargaon</p>
+            <p class="tl-date">February 2026 · 24h Hackathon</p>
+            <ul class="tl-bullets">
+              <li>No platform offers a real-time overall health score using only webcam data, highlighting the need for a privacy-first, on-device solution that combines multiple health metrics into a single dashboard.</li>
+            </ul>
+            <div class="tl-actions">
+              <a class="btn-view-cert" href="">View</a>
+            </div>
+          </div>
+        </div>
+
+
+         <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type hack">Idea Presentation</span>
+            <h3>DIPEX </h3>
+            <p>Participated 🎯</p>
+            <p class="tl-place">Sanjivani University,Kopargaon</p>
+            <p class="tl-date">February 2026 · </p>
+            <ul class="tl-bullets">
+              <li>Developing a webcam-based health monitoring system that generates a real-time overall health score</li>
+              <li>Ensures privacy by processing data on-device and combining multiple health metrics into one dashboard</li>
+            </ul>
+            <div class="tl-actions">
+              <a class="btn-view-cert" href="">View</a>
+            </div>
+          </div>
+        </div>-->
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type edu">Education</span>
+            <h3>B.Tech Computer Science & Engineering</h3>
+            <p class="tl-place">Sanjivani University, Kopargaon</p>
+            <p class="tl-date">2024 – 2028 (Expected) · Current CGPA: 8.71/10</p>
+            <ul class="tl-bullets">
+              <li>Core subjects: DSA, OS, DBMS, Computer Networks</li>
+            </ul>
+            
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type edu">Education</span>
+            <h3>HSC Science (12th) — 82.33%</h3>
+            <p class="tl-place">Swami Muktananad College, Yeola</p>
+            <p class="tl-date">2022 – 2024</p>
+           
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-type edu">Education</span>
+            <h3>SSC (10th) - 89.60%</h3>
+            <p class="tl-place">Depaul Eng Medium School,Yeola</p>
+            <p class="tl-date">2022</p>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+   <section class="section" id="certs">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">05</span>
+        <h2 class="sec-title">Hackathons</h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-logo">🏆</div>
+          <div class="cert-info">
+            <h4>Innoyudh 2025</h4>
+            <p>Among Top 10 Finalist⭐</p>
+            <p>NSRIT , VisakhaPatnam</p>
+            <span class="cert-date">December 2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1Pn1P13wiq7MMzs3_Sqd8bQqzKvLZt0Pe/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">🎖</div>
+          <div class="cert-info">
+            <h4>Kurukshetra 2025</h4>
+            <p>Participated 🎯</p>
+            <p>MIT , Pune</p>
+
+            <span class="cert-date">August 2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1t2RBf0ZDyFLn2IgjbTW_d4CZRfTKn1XD/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">💡</div>
+          <div class="cert-info">
+            <h4>IDEATHON 2025</h4>
+            <p>Participated 🎯</p>
+             <p>Vasant Dada Patil Pratishtan's COE , Mumbai</p>
+
+            <span class="cert-date">September 2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1ty_U_7yfTp1ZonRJj9Ls682pDxD0vXur/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">💻</div>
+          <div class="cert-info">
+            <h4>Triwizardathon 2025</h4>
+            <p>GLA University , Gurugram </p>
+            <p>Participated 🎯</p>
+            <span class="cert-date">August 2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1beOVEzj_UFzvgZS_aGBDRU8xo8QCIh24/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">🛠️</div>
+          <div class="cert-info">
+            <h4>DIPEX 2025</h4>
+            <p>Dr.Vithalrao Vikhe Patil COE , Ahilyanagar</p>
+            <p>Idea Presentation Round🎯</p>
+            <span class="cert-date">March 2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1Jo0H9zC4ApZ2lSjb7_ulaZsAJUlFosSA/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">🏛️</div>
+          <div class="cert-info">
+            <h4>DIPEX 2026</h4>
+            <p>Sanjivani University , Kopargaon </p>
+             <p>Idea Presentation Round🎯</p>
+
+            <span class="cert-date">February 2026</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1K5cOGXjh_JTVPiTo6nePA9bvxw8bjApG/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certs">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">06</span>
+        <h2 class="sec-title">Certifications</h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-logo">🏆</div>
+          <div class="cert-info">
+            <h4>Google Play Academy</h4>
+            <p>Google Store Listing · Google</p>
+            <span class="cert-date">June 2,2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/15nBcHK-iKLYxjQfCbDGbzTH3ef4q6Zde/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">🎖</div>
+          <div class="cert-info">
+            <h4>Core Java Programming</h4>
+            <p>Pranvi Computech · Core Java Training</p>
+            <span class="cert-date">Jul-Aug 2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1n8WQerCeLVZVJ9RZupux313_z4eexeOM/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo"> 🐍</div>
+          <div class="cert-info">
+            <h4>The Joy of Computing using Python</h4>
+            <p>NPTEL · IIT Madras </p>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1L3XfVCs518sIRQ1AC-FjYUUoXXLUlwPV/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">📊</div>
+          <div class="cert-info">
+            <h4>Learning Analytics Tools</h4>
+            <p>NPTEL . IIT Bombay </p>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1rxUrfmp6VB0hl9ORFXNl2RfsStKrvqDE/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">⚛</div>
+          <div class="cert-info">
+            <h4>Artificial Intelligence Fundamentals</h4>
+            <p>Great Learning</p>
+            <span class="cert-date">2025</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1nmBPIY4ChuY3TFLYTtfANcMY8_iS73yB/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-logo">🔒</div>
+          <div class="cert-info">
+            <h4>SQL Projects</h4>
+            <p>Simplilearn  </p>
+            <span class="cert-date">24 May,2024</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1AIX2iZMDbh62YXS7LrM_ym409xi8FtYK/view?usp=drivesdk" class="cert-badge">View</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-alt" id="contact">
+    <div class="section-inner">
+      <div class="sec-header reveal">
+        <span class="sec-num">07</span>
+        <h2 class="sec-title">Let's Connect</h2>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <p class="contact-intro">I'm actively looking for internship and collaboration opportunities. Whether you have a project idea, want to hire, or just want to say hi — my inbox is open!</p>
+          <a href="mailto:sarthak@email.com" class="email-big">palakdeshmukh181@gmail.com</a>
+          <div class="social-row">
+            <a href="https://github.com/Palak9763" target="_blank" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              github.com/palak
+            </a>
+            <a href="https://www.linkedin.com/in/palak-deshmukh-49819231b" target="_blank" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              linkedin.com/in/palak
+            </a>
+           <!-- <a href="https://twitter.com/palak" target="_blank" class="social-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              @palak
+            </a>-->
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Your Email</label>
+            <input type="email" placeholder="john@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell me about your projects..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width" id="sendBtn">
+            <span id="btnText">Send Message ↗</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! I'll reply within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="nav-logo">PD<span class="logo-dot"></span></span>
+        <p>Made by Palak</p>
+      </div>
+      <div class="footer-right">
+        <p>© 2026</p>
+        <p>Kopargaon, Maharashtra</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+  <input type="file" id="photoInput" accept="image/*" style="display:none" />
+
+  <script src="script.js"></script>
+</body>
+</html>
