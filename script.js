@@ -287,40 +287,12 @@ staggerReveal('.skills-categories', 80);
 /* ── DOWNLOAD CV ── */
 document.getElementById('downloadResume').addEventListener('click', (e) => {
   e.preventDefault();
-  // Creates a simple text "resume" for demo purposes
-  const cvContent = `SARTHAK DARANDALE
-CS Student · Full-Stack Developer
-Aurangabad, Maharashtra
-palak@email.com | github.com/Palak9763 | linkedin.com/in/palak
-
-EDUCATION
-B.Tech Computer Science & Engineering
-MGM's College of Engineering, Aurangabad (2022–2026) · CGPA: 8.4/10
-
-EXPERIENCE
-Software Engineering Intern — TechCorp Solutions, Pune (Jun–Aug 2024)
-- Built 5 RESTful APIs consumed by 10k+ users daily
-- Reduced page load time by 35% via code-splitting
-
-PROJECTS
-- ShopSmart: Full-stack e-commerce (React, Node.js, MongoDB, Stripe)
-- MedPredict: Disease classifier, 92% accuracy (Python, Scikit-learn, Flask)
-- TaskFlow: Kanban app with real-time collaboration (React, Socket.io)
-- SentimentScope: Twitter NLP analyzer with BERT
-
-SKILLS
-Python, Java, C++, JavaScript, TypeScript, React, Next.js, Node.js,
-MongoDB, MySQL, TensorFlow, Scikit-learn, Docker, Git
-
-CERTIFICATIONS
-- ML Specialization — Coursera / Andrew Ng (2024)
-- Full-Stack Web Dev — Udemy (2023)
-- DSA — NPTEL / IIT Bombay, Silver Elite (2023)
-`;
-  const blob = new Blob([cvContent], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
+  // Use the actual resume PDF file stored in the Resume folder
+  const cvContent = 'Resume/Palak_Deshmukh_Resume.pdf';
   const a = document.createElement('a');
-  a.href = url; a.download = 'Sarthak_Darandale_CV.txt';
-  a.click(); URL.revokeObjectURL(url);
+  a.href = cvContent;
+  a.download = 'Palak_Deshmukh_Resume.pdf';
+  a.click();
 });
+
 
