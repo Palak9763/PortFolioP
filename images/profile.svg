@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#g)" />
+  <g transform="translate(50,42)">
+    <circle cx="0" cy="-6" r="14" fill="#fff" opacity="0.12"/>
+    <circle cx="0" cy="-6" r="10" fill="#fff"/>
+    <rect x="-22" y="18" width="44" height="22" rx="6" fill="#fff" opacity="0.12"/>
+  </g>
+  <text x="50" y="66" font-family="DM Sans, Arial" font-size="18" fill="#fff" text-anchor="middle" font-weight="700">Palak</text>
+</svg>

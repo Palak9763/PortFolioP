@@ -1,8 +1,3 @@
-/* ======================================
-   SARTHAK PORTFOLIO — SCRIPT.JS
-   ====================================== */
-
-/* ── CUSTOM CURSOR ── */
 const cursor = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
 let mouseX = 0, mouseY = 0;
@@ -29,12 +24,10 @@ document.querySelectorAll('a, button, .proj-card, .skill-pill, .cert-card').forE
   el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1)');
 });
 
-/* ── THEME TOGGLE ── */
 const html = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
 const toggleIcon = document.getElementById('toggleIcon');
 
-// Default is light theme
 let isDark = false;
 
 themeToggle.addEventListener('click', () => {
@@ -43,7 +36,6 @@ themeToggle.addEventListener('click', () => {
   toggleIcon.textContent = isDark ? '☀' : '☾';
 });
 
-/* ── HAMBURGER MENU ── */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 
@@ -54,14 +46,10 @@ mobileMenu.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => mobileMenu.classList.remove('open'));
 });
 
-/* ── TYPED TEXT ── */
 const words = [
-  'Full Stack Developer',
-  'ML Enthusiast',
   'Problem Solver',
-  'CS Student · 3rd Year',
-  'Open Source Contributor',
-  'Hackathon Winner 🏆',
+  'CSE Student · 3rd Year',
+ 
 ];
 let wi = 0, ci = 0, deleting = false;
 const typedEl = document.getElementById('typedText');
@@ -88,7 +76,6 @@ function type() {
 }
 type();
 
-/* ── SCROLL REVEAL ── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -127,13 +114,11 @@ const statsObserver = new IntersectionObserver((entries) => {
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) statsObserver.observe(heroStats);
 
-/* ── PROJECT FILTER ── */
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projCards = document.querySelectorAll('.proj-card');
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Update active state
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
@@ -142,7 +127,6 @@ filterBtns.forEach(btn => {
       const cat = card.dataset.cat;
       if (filter === 'all' || cat === filter) {
         card.classList.remove('hidden');
-        // Re-trigger animation
         card.style.opacity = '0';
         card.style.transform = 'translateY(16px)';
         setTimeout(() => {
@@ -157,7 +141,6 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ── CONTACT FORM ── */
 const contactForm = document.getElementById('contactForm');
 const sendBtn = document.getElementById('sendBtn');
 const btnText = document.getElementById('btnText');
@@ -181,7 +164,6 @@ if (contactForm) {
   });
 }
 
-/* ── NAVBAR SCROLL EFFECT ── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 50) {
@@ -190,27 +172,28 @@ window.addEventListener('scroll', () => {
     navbar.style.boxShadow = 'none';
   }
 
-  // Back to top button
   backTop.classList.toggle('visible', window.scrollY > 400);
 });
 
-/* ── BACK TO TOP ── */
 const backTop = document.getElementById('backTop');
 backTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* ── PHOTO UPLOAD ── */
 const photoFrame = document.getElementById('photoFrame');
 const photoInput = document.getElementById('photoInput');
 const photoImg = document.getElementById('photoImg');
 const photoInitials = document.getElementById('photoInitials');
 
-// Load saved image on page load
 window.addEventListener('load', () => {
   const savedImage = localStorage.getItem('profileImage');
+  const defaultImage = 'images/Palak_profile.jpeg';
   if (savedImage) {
     photoImg.src = savedImage;
+    photoImg.style.display = 'block';
+    photoInitials.style.display = 'none';
+  } else {
+    photoImg.src = defaultImage;
     photoImg.style.display = 'block';
     photoInitials.style.display = 'none';
   }
@@ -232,7 +215,6 @@ photoInput.addEventListener('change', (e) => {
   reader.readAsDataURL(file);
 });
 
-// Add delete functionality on right-click
 photoFrame.addEventListener('contextmenu', (e) => {
   e.preventDefault();
   if (photoImg.style.display === 'block') {
@@ -245,7 +227,6 @@ photoFrame.addEventListener('contextmenu', (e) => {
   }
 });
 
-/* ── SMOOTH NAV LINK SCROLL ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));
@@ -256,14 +237,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-/* ── SKILL PILL HOVER RIPPLE ── */
 document.querySelectorAll('.skill-pill').forEach(pill => {
   pill.addEventListener('mouseenter', function () {
     this.style.transition = 'all 0.2s ease';
   });
 });
 
-/* ── STAGGERED REVEAL FOR GRID CHILDREN ── */
 function staggerReveal(containerSelector, delay = 80) {
   const containers = document.querySelectorAll(containerSelector);
   containers.forEach(container => {
@@ -284,10 +263,8 @@ staggerReveal('.proj-grid', 100);
 staggerReveal('.cert-grid', 90);
 staggerReveal('.skills-categories', 80);
 
-/* ── DOWNLOAD CV ── */
 document.getElementById('downloadResume').addEventListener('click', (e) => {
   e.preventDefault();
-  // Use the actual resume PDF file stored in the Resume folder
   const cvContent = 'Resume/Palak_Deshmukh_Resume.pdf';
   const a = document.createElement('a');
   a.href = cvContent;
