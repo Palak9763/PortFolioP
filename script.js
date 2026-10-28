@@ -6,15 +6,19 @@ let curX = 0, curY = 0;
 document.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
-  cursorDot.style.left = mouseX - 3 + 'px';
-  cursorDot.style.top = mouseY - 3 + 'px';
+  if (cursorDot) {
+    cursorDot.style.left = mouseX - 3 + 'px';
+    cursorDot.style.top = mouseY - 3 + 'px';
+  }
 });
 
 function animCursor() {
-  curX += (mouseX - curX) * 0.1;
-  curY += (mouseY - curY) * 0.1;
-  cursor.style.left = curX - 18 + 'px';
-  cursor.style.top = curY - 18 + 'px';
+  if (cursor) {
+    curX += (mouseX - curX) * 0.1;
+    curY += (mouseY - curY) * 0.1;
+    cursor.style.left = curX - 18 + 'px';
+    cursor.style.top = curY - 18 + 'px';
+  }
   requestAnimationFrame(animCursor);
 }
 animCursor();
@@ -145,22 +149,50 @@ const contactForm = document.getElementById('contactForm');
 const sendBtn = document.getElementById('sendBtn');
 const btnText = document.getElementById('btnText');
 const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     btnText.textContent = 'Sending...';
     sendBtn.disabled = true;
     sendBtn.style.opacity = '0.7';
+    if (formSuccess) formSuccess.style.display = 'none';
+    if (formError) formError.style.display = 'none';
 
-    setTimeout(() => {
+    try {
+      const formData = new FormData(contactForm);
+      const jsonObject = Object.fromEntries(formData.entries());
+
+      const response = await fetch('https://formsubmit.co/ajax/palakdeshmukh181@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(jsonObject)
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (response.ok && (result.success === 'true' || result.success === true || response.status === 200)) {
+        if (formSuccess) formSuccess.style.display = 'block';
+        contactForm.reset();
+        setTimeout(() => { if (formSuccess) formSuccess.style.display = 'none'; }, 6000);
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
+    } catch (err) {
+      console.error('Contact form error:', err);
+      if (formError) {
+        formError.style.display = 'block';
+        setTimeout(() => { if (formError) formError.style.display = 'none'; }, 6000);
+      }
+    } finally {
       btnText.textContent = 'Send Message ↗';
       sendBtn.disabled = false;
       sendBtn.style.opacity = '1';
-      formSuccess.style.display = 'block';
-      contactForm.reset();
-      setTimeout(() => { formSuccess.style.display = 'none'; }, 5000);
-    }, 1500);
+    }
   });
 }
 
@@ -229,7 +261,13 @@ photoFrame.addEventListener('contextmenu', (e) => {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
